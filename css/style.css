@@ -41,6 +41,7 @@ body {
 @media (min-width: 576px) {
   .hamburger {
     display: none;
+   
   }
 }
 
@@ -72,6 +73,7 @@ body {
 }
 
 /* ------------------------------------------------- */
+
 .navbar {
   padding: 0;
   margin: 0;
@@ -84,6 +86,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  position: relative;
+ z-index: 2;
 }
 
 .navbar__list {
@@ -391,6 +396,7 @@ footer{
 		.img-tres {
 			background-image: url("https://images.unsplash.com/photo-1610971752667-e8c3e0e890fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGxpYnJvcyUyMGJsYW5jbyUyMHluZWdyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60")
 		}
+
 /* ------------------------------ */
 /* carrito */
 
