@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Camila Villanueva">
+  <meta name="Copyright" content="Mi Libreria">
+  <!-- icono -->
+  <link rel="shortcut icon" href="https://cdn3.iconfinder.com/data/icons/set-1-1/72/books-256.png">
+  <!-- link css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Mi Libreria</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar--right navbar--primary-right">
+    <div class="hamburger" id="hamburger">
+      <div class="hamburger__line hamburger__line-top"></div>
+      <div class="hamburger__line hamburger__line-middle"></div>
+      <div class="hamburger__line hamburger__line-bottom"></div>
+    </div>
+
+    <ul class="navbar__list nav-closed" id="primary-nav-list">
+      <li class="navbar__item">
+        <a class="navbar__link" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link" href="about.html"> Nosotros</a>
+      </li>
+      <li class="navbar__item">
+        <a class="navbar__link" href="contact.html"> Contacto</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="contenedordeBtn">
+    <input type="text" id="buscador" placeholder="Buscar libros">
+  </div>
+
+  <div id="productos"> </div>
+
+  <h2 class="TituloCarrito">Carrito de Compras</h2>
+  <div id="carrito"></div>
+
+  <div id="resumen-compra">
+    <p id="total-precio"></p>
+  </div>
+
+  <div class="btnConfirmar">
+    <button id="boton-confirmar">Confirmar Compra</button>
+  </div>
+  <p id="total-gastado">Total Gastado: $0</p>
+
+  <footer>
+    <div class="contenedorBotones">
+      <a class="socialButton facebook" href="https://www.facebook.com/" target="_blank"><i
+          class="fab fa-facebook-f"></i> <img
+          src="https://cdn1.iconfinder.com/data/icons/social-media-outline-6/128/SocialMedia_Facebook-Outline-512.png"
+          width="30px" alt="icono facebook"></a>
+      <a class="socialButton twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i><img
+          src="https://cdn0.iconfinder.com/data/icons/brands-outlined-3/211/twiter-social-network-brand-logo-512.png "
+          width="30px" alt="icono twitter"></a>
+      <a class="socialButton linkedin" href="https://www.linkedin.com/" target="_blank"><i
+          class="fab fa-linkedin"></i><img
+          src=" https://cdn4.iconfinder.com/data/icons/social-media-and-logos-12/32/Logo_LinkedIn-512.png" width="30px"
+          alt="icono linkedin"></a>
+      <a class="socialButton youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i><img
+          src="https://cdn4.iconfinder.com/data/icons/social-media-and-logos-12/32/Logo_Youtube-512.png" width="30px"
+          alt="icono youtube"></a>
+      <a class="socialButton instagram" href="https://www.instagram.com/" target="_blank"><i
+          class="fab fa-instagram"></i><img
+          src=" https://cdn0.iconfinder.com/data/icons/phosphor-thin-vol-3/256/instagram-logo-thin-512.png" width="30px"
+          alt="icono instagram"></a>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
