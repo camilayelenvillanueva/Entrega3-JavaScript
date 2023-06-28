@@ -1,12 +1,10 @@
-
 body {
   margin: 0;
   background-image: url("https://images.unsplash.com/photo-1579492450119-80542d516179?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
 }
 
 /* ------------------------------------------------- */
-
-
+/* boton hanburguesa */
 .hamburger {
   width: 40px;
   height: 40px;
@@ -25,7 +23,7 @@ body {
 
 .hamburger::before {
   content: '';
-  background-color:#679186;
+  background-color: #679186;
   width: 40px;
   height: 40px;
   position: absolute;
@@ -41,7 +39,7 @@ body {
 @media (min-width: 576px) {
   .hamburger {
     display: none;
-   
+
   }
 }
 
@@ -73,7 +71,7 @@ body {
 }
 
 /* ------------------------------------------------- */
-
+/* nav */
 .navbar {
   padding: 0;
   margin: 0;
@@ -88,7 +86,7 @@ body {
   align-items: center;
 
   position: relative;
- z-index: 2;
+  z-index: 2;
 }
 
 .navbar__list {
@@ -150,7 +148,7 @@ body {
 
 
   .navbar__link:hover {
-    background-color:#D6E5DD;
+    background-color: #D6E5DD;
   }
 
   .navbar__link::before {
@@ -170,7 +168,6 @@ body {
   }
 }
 /* ------------------------------------------------- */
-
 /* input */
 .contenedordeBtn {
   display: flex;
@@ -181,19 +178,18 @@ body {
 
 #buscador {
   outline: none;
-    width: 250px;
-    height: 30px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 3px solid #68ac9a;
-    color: #0f0f0f;
-    transition: border-bottom .5s;
+  width: 250px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #68ac9a;
+  color: #0f0f0f;
+  transition: border-bottom .5s;
 }
 
-#buscador:hover{
+#buscador:hover {
   border-bottom: 3px solid crimson;
 }
-
 /* ------------------------------------------------- */
 /* contenedor */
 #productos {
@@ -202,15 +198,17 @@ body {
   flex-wrap: wrap;
   margin-block-end: 11px;
 }
-.tarjetaProducto{
+
+.tarjetaProducto {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 550px;
   padding: 65px;
   margin-top: 20px;
-  background-color:transparent;
+  background-color: transparent;
 }
+
 .filas {
   display: flex;
   justify-content: space-evenly;
@@ -252,7 +250,7 @@ body {
 .producto .productoTitulo {
   padding-left: 10px;
   font-weight: bold;
-  color:#3b3434 ;
+  color: #3b3434;
 }
 
 .producto .productoAutor {
@@ -262,7 +260,8 @@ body {
   color: #0f0f0f;
   cursor: pointer;
 }
-.producto .productoAutor:hover{
+
+.producto .productoAutor:hover {
   text-decoration: underline;
   color: #0f0f0f;
 }
@@ -273,7 +272,8 @@ body {
   align-items: center;
   height: 20px;
 }
-.tarjeta .descripcion p{
+
+.tarjeta .descripcion p {
   display: flex;
   align-items: center;
   margin: 0;
@@ -282,7 +282,8 @@ body {
   height: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.tarjeta .precio{
+
+.tarjeta .precio {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -297,6 +298,7 @@ body {
   color: white;
   border-radius: 5px;
 }
+
 .tarjeta .precio button {
   margin-right: 10px;
   padding: 5px 10px 8px 10px;
@@ -307,20 +309,22 @@ body {
   box-shadow: 0 0 2px 1px black;
   transition: 0.25s;
 }
+
 .tarjeta .precio button:hover {
   box-shadow: 0 0 10px 7px #679186;
 }
+
 @media only screen and (max-width: 900px) {
   .filas {
     flex-wrap: wrap;
   }
 }
-
 /* --------------------------------------------------- */
 /* footer */
-footer{
+footer {
   margin: 30px;
 }
+
 .contenedorBotones {
   text-align: center;
 }
@@ -353,62 +357,62 @@ footer{
 }
 /* ------------------------------ */
 /* nosotros */
-.main  .content .parallax {
-			background-attachment: fixed;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			height: 30rem;
-			max-width: 100%;
-			position: relative
-		}
+.main .content .parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  max-width: 100%;
+  position: relative
+}
 
-		.texto-interior {
-			color: #ffeead;
-      text-shadow: 4px 4px 12px rgba(0,0,0,0.99);
-      font-size: 2rem;
-      font-style: italic;
-      font-weight: bold;
-			left: 10%;
-			position: absolute;
-			text-align: center;
-			top: 40%;
-			width: 80%
-		}
+.texto-interior {
+  color: #ffeead;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.99);
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 80%
+}
 
-		.texto {
-      font-family:Georgia, 'Times New Roman', Times, serif;
-      font-style: initial;
-      font-weight: bold;
-			padding: 5%;
-			width: 90%
-		}
+.texto {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: initial;
+  font-weight: bold;
+  padding: 5%;
+  width: 90%
+}
 
-		.img-uno {
+.img-uno {
 
-			background-image: url("https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
-		}
+  background-image: url("https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+}
 
-		.img-dos {
-			background-image: url("https://images.unsplash.com/photo-1517673132405-a56a62b18caf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80")
-		}
+.img-dos {
+  background-image: url("https://images.unsplash.com/photo-1517673132405-a56a62b18caf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80")
+}
 
-		.img-tres {
-			background-image: url("https://images.unsplash.com/photo-1610971752667-e8c3e0e890fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGxpYnJvcyUyMGJsYW5jbyUyMHluZWdyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60")
-		}
+.img-tres {
+  background-image: url("https://images.unsplash.com/photo-1610971752667-e8c3e0e890fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGxpYnJvcyUyMGJsYW5jbyUyMHluZWdyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60")
+}
 
 /* ------------------------------ */
 /* carrito */
-
 #carrito {
   margin-top: 20px;
-
 }
-.TituloCarrito{
+
+.TituloCarrito {
   font-family: 'Times New Roman', Times, serif;
   font-size: 2rem;
   text-align: center;
 }
+
 .book {
   border: 3px solid #333333;
   color: #0f0f0f;
@@ -419,7 +423,7 @@ footer{
 
 .book h2 {
   margin-top: 30px;
-  font-size:1rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -428,7 +432,7 @@ footer{
   margin: 0;
 }
 
-#total-precio{
+#total-precio {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1rem;
   text-align: center;
@@ -437,7 +441,7 @@ footer{
 /* ------------------------------------------------- */
 /* boton eliminar */
 .eliminar {
-  background-color:#0f0f0f;
+  background-color: #0f0f0f;
   color: #ffffff;
   padding: 6px 12px;
   border: none;
@@ -447,21 +451,21 @@ footer{
 }
 
 .eliminar:hover {
-  box-shadow: 1px 2px 72px 19px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 1px 2px 72px 19px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 2px 72px 19px rgba(0,0,0,0.75);
+  box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
 }
 /* -------------------------------------------- */
 /* boton confirmar */
-.btnConfirmar{
+.btnConfirmar {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 8vh;
 }
 
-#boton-confirmar{
-  background-color:#0f0f0f;
+#boton-confirmar {
+  background-color: #0f0f0f;
   color: #ffffff;
   padding: 6px 12px;
   border: none;
@@ -469,15 +473,100 @@ footer{
   font-size: 15px;
   cursor: pointer;
 }
-#boton-confirmar:hover{
+
+#boton-confirmar:hover {
   color: #68ac9a;
-  box-shadow: 1px 2px 72px 19px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 1px 2px 72px 19px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 2px 72px 19px rgba(0,0,0,0.75);
+  box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
 }
 
-#total-gastado{
+#total-gastado {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1rem;
   text-align: center;
+}
+/* ............................................. */
+/* contacto */
+.todoContacto {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.bodyContacto {
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: transparent;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 3%;
+}
+
+#contacto {
+  background: #f9f9f9;
+  padding: 50px;
+  margin: 40px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contacto h2 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto input[type="tel"],
+#contacto input[type="url"],
+#contacto textarea {
+  width: 100%;
+  border: 1px solid #68ac9a;
+  background: #fff;
+  margin: 2px;
+  padding: 10px;
+}
+
+#contacto input[type="text"]:hover,
+#contacto input[type="email"]:hover,
+#contacto input[type="tel"]:hover,
+#contacto input[type="url"]:hover,
+#contacto textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  box-shadow: 2px 0px 36px 5px rgba(104,172,154,0.41);
+  -webkit-box-shadow: 2px 0px 36px 5px rgba(104,172,154,0.41);
+  -moz-box-shadow: 2px 0px 36px 5px rgba(104,172,154,0.41);
+}
+#contacto button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #777;
+  color: #fff;
+  margin-top: 25px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contacto button[type="submit"]:hover {
+  background:#679186;
 }

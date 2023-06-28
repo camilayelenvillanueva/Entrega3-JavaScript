@@ -199,3 +199,5 @@ function confirmarCompra() {
 /*   window.location.href = "contact.html" */
   }
   
+
+  /* --------------------------------------- */
