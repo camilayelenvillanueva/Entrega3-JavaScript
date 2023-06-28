@@ -28,9 +28,15 @@ const productos = [
 
     { id: 7, titulo: "Cuatro comidas", categoria: "COCINA", precio: 13000, rutaImagen: "01.jpg", autor: "	Nicolás Artusi", sinopsis: " Empachado de anécdotas y repleto de eurekas, escribo esto bajo una montaña de papeles, libros y enciclopedias que se funden con mis recuerdos lejanos de la infancia, el desayuno de la vida, o con los más cercanos de este almuerzo todavía ...." },
     
-    { id: 8,  titulo: "Recetas de carne", categoria: "COCINA", precio: 10400, rutaImagen: "01.jpg", autor: "Pietro Sorba", sinopsis: "¿Por qué no probar más cortes? ¿Por qué no probar nuestras carnes en recetas consolidadas expresadas por otros países del mundo? ¿Por qué no abrir el juego a recetas más creativas? ¿Por qué no inspirarnos en quienes..." }
+    { id: 8,  titulo: "Recetas de carne", categoria: "COCINA", precio: 10400, rutaImagen: "01.jpg", autor: "Pietro Sorba", sinopsis: "¿Por qué no probar más cortes? ¿Por qué no probar nuestras carnes en recetas consolidadas expresadas por otros países del mundo? ¿Por qué no abrir el juego a recetas más creativas? ¿Por qué no inspirarnos en quienes..." },
 
+    { id: 9,  titulo: "El libro de la selva",  categoria: "INFANTILES", precio: 4000, rutaImagen: "01.jpg", autor: "Rudyard Kipling", sinopsis: "Yo nací en la Selva. He obedecido la Leyde la Selva, y no hay ni uno de nuestroslobos al que no haya quitado una espinade las patas. ¿Cómo no van a ser mishermanos?..." },
 
+    { id: 10, titulo: "Una historia de peluche", categoria: "INFANTILES", precio: 3290, rutaImagen: "01.jpg", autor: "Sara Bertrand", sinopsis: "Una historia llena de ternura 'ilustrada por el premiado Rafael Yockteng' en la que descubriremos que cada uno tiene sus formas y que es importante no olvidarlo." },
+
+    { id: 11, titulo: "Cincuentena",  categoria: "POESÍA", precio: 3200, rutaImagen: "01.jpg", autor: "Tomas wsher", sinopsis: "Con el festivo pretexto de celebrar sus cincuenta años, García Montero ha seleccionado, entre su producción poética, los cincuenta poemas que integran este volumen." },
+
+    { id: 12,  titulo: "Hambriento", categoria: "POESÍA", precio: 4400, rutaImagen: "01.jpg", autor: "Nach", sinopsis: "El primer libro de poesía del artista de hip-hopNach." }
 ]
 
 const contenedor = document.getElementById("productos")
