@@ -360,8 +360,10 @@ footer{
 
 		.texto-interior {
 			color: #ffeead;
-			font-size: 2rem;
-			font-weight: bold;
+      text-shadow: 4px 4px 12px rgba(0,0,0,0.99);
+      font-size: 2rem;
+      font-style: italic;
+      font-weight: bold;
 			left: 10%;
 			position: absolute;
 			text-align: center;
@@ -370,6 +372,9 @@ footer{
 		}
 
 		.texto {
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-style: initial;
+      font-weight: bold;
 			padding: 5%;
 			width: 90%
 		}
