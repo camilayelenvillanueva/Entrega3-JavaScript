@@ -1,0 +1,52 @@
+@media (min-width: 576px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar {
+    display: flex;
+    height: 100%;
+  }
+
+  .navbar__list {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+    transition: none;
+    transform: none
+  }
+
+  .navbar__link {
+    margin: 0;
+
+    &:hover {
+      background-color: #D6E5DD;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 5px;
+      border-bottom: 2px solid #333333;
+      transform: scalex(0);
+      transition: 0.3s all ease;
+    }
+
+    &:hover::before {
+      transform: scalex(1);
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .filas {
+    flex-wrap: wrap;
+  }
+}

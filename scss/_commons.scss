@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    background-image: url("https://images.unsplash.com/photo-1579492450119-80542d516179?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+}
+
+
+
+//cuenta
+.todoContacto {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+
+    .bodyContacto {
+        font-weight: 100;
+        font-size: 12px;
+        line-height: 30px;
+        color: #777;
+        background: transparent;
+    }
+
+    .container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        min-height: 100vh;
+        padding-top: 3%;
+    }
+
+    #contacto {
+        background: #f9f9f9;
+        padding: 50px;
+        margin: 40px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+        h2 {
+            display: block;
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid #68ac9a;
+            background: #fff;
+            margin: 2px;
+            padding: 10px;
+
+            & :hover {
+                -webkit-transition: border-color 0.3s ease-in-out;
+                -moz-transition: border-color 0.3s ease-in-out;
+                transition: border-color 0.3s ease-in-out;
+                box-shadow: 2px 0px 36px 5px rgba(104, 172, 154, 0.41);
+                -webkit-box-shadow: 2px 0px 36px 5px rgba(104, 172, 154, 0.41);
+                -moz-box-shadow: 2px 0px 36px 5px rgba(104, 172, 154, 0.41);
+            }
+        }
+
+        button {
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            background: #777;
+            color: #fff;
+            margin-top: 25px;
+            padding: 10px;
+            font-size: 15px;
+
+            &:hover {
+                background: #679186;
+            }
+        }
+    }
+}
+
+//nosotros
+.main {
+    .content {
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30rem;
+            max-width: 100%;
+            position: relative;
+
+            .texto-interior {
+                color: #ffeead;
+                text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.99);
+                font-size: 2rem;
+                font-style: italic;
+                font-weight: bold;
+                left: 10%;
+                position: absolute;
+                text-align: center;
+                top: 40%;
+                width: 80%
+            }
+        }
+
+        .texto {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: initial;
+            font-weight: bold;
+            padding: 5%;
+            width: 90%
+        }
+
+        .img-uno {
+
+            background-image: url("https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+        }
+
+        .img-dos {
+            background-image: url("https://images.unsplash.com/photo-1517673132405-a56a62b18caf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80")
+        }
+
+        .img-tres {
+            background-image: url("https://images.unsplash.com/photo-1610971752667-e8c3e0e890fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGxpYnJvcyUyMGJsYW5jbyUyMHluZWdyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60")
+        }
+    }
+}
+
+//footer
+footer {
+    margin: 30px;
+
+    .contenedorBotones {
+        text-align: center;
+
+        .socialButton {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            width: 3.125rem;
+            height: 3.125rem;
+            border: 0.125rem solid transparent;
+            padding: 0;
+            text-decoration: none;
+            text-align: center;
+            color: #fefefe;
+            font-size: 1.5625rem;
+            font-weight: normal;
+            line-height: 2em;
+            border-radius: 1.6875rem;
+            transition: all 0.5s ease;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+
+            &:focus {
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+//carrito
+#carrito {
+    margin-top: 20px;
+
+    .book {
+        border: 3px solid #333333;
+        color: #0f0f0f;
+        background-color: hsla(164, 17%, 49%, 0.562);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        margin-top: 30px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.TituloCarrito {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#total-precio {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+//btn eliminar
+.eliminar {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+    }
+}
+
+//btn confirmar
+.btnConfirmar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+
+    #boton-confirmar {
+        background-color: #0f0f0f;
+        color: #ffffff;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: #68ac9a;
+            box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+        }
+    }
+
+    #volverComprar {
+        background-color: #0f0f0f;
+        color: #ffffff;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        cursor: pointer;
+        display: none;
+
+        &:hover {
+            color: #68ac9a;
+            box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+        }
+    }
+
+}
+
+
+#total-gastado {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+//input buscador
+.contenedordeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+
+    #buscador {
+        outline: none;
+        width: 250px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 3px solid #68ac9a;
+        color: #0f0f0f;
+        transition: border-bottom .5s;
+
+        &:hover {
+            border-bottom: 3px solid crimson;
+        }
+    }
+}

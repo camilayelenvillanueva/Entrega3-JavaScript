@@ -42,7 +42,7 @@ const contenedor = document.getElementById("productos")
 const buscador = document.getElementById("buscador")
 
 let carritoJSON = JSON.parse(localStorage.getItem("carrito"))
-let carrito =  carritoJSON ? carritoJSON : []
+let carrito = carritoJSON ? carritoJSON : []
 
 /* 
 if (carritoJSON) {
@@ -69,10 +69,10 @@ function crearTarjetas(array, contenedor) {
         producto.innerHTML = `
         <div class="filas">
           <div class="tarjeta">
-            <div class="imagen" style="background-image: url(./img/${elemento.rutaImagen})"></div>
-            <div class="producto">
-              <span class="productoTitulo">${elemento.titulo}</span>
-              <span class="productoAutor">${elemento.autor}</span>
+                <div class="imagen" style="background-image: url(./img/${elemento.rutaImagen})"></div>
+                <div class="producto">
+                <span class="productoTitulo">${elemento.titulo}</span>
+                <span class="productoAutor">${elemento.autor}</span>
             </div>
             <div class="descripcion">
               <p>${mensaje}</p>
@@ -110,7 +110,7 @@ function agregarAlCarrito(event) {
     const libroId = event.target.dataset.id
     const libro = obtenerLibroPorId(libroId)
 
-    !libro ? (alert("El libro seleccionado no existe.") ) : null
+    !libro ? (alert("El libro seleccionado no existe.")) : null
 
     /* if (!libro) {
         alert("El libro seleccionado no existe.")
@@ -121,10 +121,10 @@ function agregarAlCarrito(event) {
 
     libroEnCarrito ? (alert("El libro ya está en el carrito. Agregamos otro unidad")) : null
 
-   /*  if (libroEnCarrito) {
-        alert("El libro ya está en el carrito.")
-        return
-    } */
+    /*  if (libroEnCarrito) {
+         alert("El libro ya está en el carrito.")
+         return
+     } */
 
     carrito.push(libro)
     actualizarInterfazCarrito()
@@ -198,17 +198,17 @@ function actualizarInterfazCarrito() {
 function eliminarDelCarrito(event) {
     const productoId = event.target.dataset.id
     const productoIndex = carrito.findIndex((producto) => producto.id === parseInt(productoId))
-    
+
     productoIndex > -1 && (carrito.splice(productoIndex, 1), actualizarInterfazCarrito(), localStorage.setItem("carrito", JSON.stringify(carrito)))
 
-  /*   if (productoIndex > -1) {
-        carrito.splice(productoIndex, 1)
-        actualizarInterfazCarrito()
-
-        // actualiza el carrito en el almacenamiento local
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-
-    } */
+    /*   if (productoIndex > -1) {
+          carrito.splice(productoIndex, 1)
+          actualizarInterfazCarrito()
+  
+          // actualiza el carrito en el almacenamiento local
+          localStorage.setItem("carrito", JSON.stringify(carrito))
+  
+      } */
 }
 
 /* --------------------------------------- */
