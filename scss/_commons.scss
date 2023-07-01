@@ -3,86 +3,6 @@ body {
     background-image: url("https://images.unsplash.com/photo-1579492450119-80542d516179?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
 }
 
-
-
-//cuenta
-.todoContacto {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-
-
-    .bodyContacto {
-        font-weight: 100;
-        font-size: 12px;
-        line-height: 30px;
-        color: #777;
-        background: transparent;
-    }
-
-    .container {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        min-height: 100vh;
-        padding-top: 3%;
-    }
-
-    #contacto {
-        background: #f9f9f9;
-        padding: 50px;
-        margin: 40px;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-
-        h2 {
-            display: block;
-            font-size: 30px;
-            font-weight: 300;
-            margin-bottom: 10px;
-        }
-
-        input {
-            width: 100%;
-            border: 1px solid #68ac9a;
-            background: #fff;
-            margin: 2px;
-            padding: 10px;
-
-            & :hover {
-                -webkit-transition: border-color 0.3s ease-in-out;
-                -moz-transition: border-color 0.3s ease-in-out;
-                transition: border-color 0.3s ease-in-out;
-                box-shadow: 2px 0px 36px 5px rgba(104, 172, 154, 0.41);
-                -webkit-box-shadow: 2px 0px 36px 5px rgba(104, 172, 154, 0.41);
-                -moz-box-shadow: 2px 0px 36px 5px rgba(104, 172, 154, 0.41);
-            }
-        }
-
-        button {
-            cursor: pointer;
-            width: 100%;
-            border: none;
-            background: #777;
-            color: #fff;
-            margin-top: 25px;
-            padding: 10px;
-            font-size: 15px;
-
-            &:hover {
-                background: #679186;
-            }
-        }
-    }
-}
-
 //nosotros
 .main {
     .content {
@@ -91,30 +11,30 @@ body {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 30rem;
-            max-width: 100%;
+            height: $rem-30;
+            max-width: $porcentaje-100;
             position: relative;
 
             .texto-interior {
-                color: #ffeead;
-                text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.99);
-                font-size: 2rem;
-                font-style: italic;
+                color: $color-amarrilo;
+                text-shadow: $px-4 $px-4 $px-12 $color-black;
+                font-size: $rem-2;
+                font-style: $font-style-italic;
                 font-weight: bold;
-                left: 10%;
+                left: $porcentaje-10;
                 position: absolute;
                 text-align: center;
-                top: 40%;
-                width: 80%
+                top: $porcentaje-40;
+                width: $porcentaje-80;
             }
         }
 
         .texto {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-style: initial;
+            font-family: $font-georgia;
+            font-style: $font-style-initial;
             font-weight: bold;
-            padding: 5%;
-            width: 90%
+            padding: $porcentaje-5;
+            width: $porcentaje-90;
         }
 
         .img-uno {
@@ -134,7 +54,7 @@ body {
 
 //footer
 footer {
-    margin: 30px;
+    margin: $px-30;
 
     .contenedorBotones {
         text-align: center;
@@ -143,20 +63,20 @@ footer {
             display: inline-block;
             position: relative;
             cursor: pointer;
-            width: 3.125rem;
-            height: 3.125rem;
-            border: 0.125rem solid transparent;
+            width: $rem-3125;
+            height: $rem-3125;
+            border: $rem-0125 solid transparent;
             padding: 0;
             text-decoration: none;
             text-align: center;
-            color: #fefefe;
-            font-size: 1.5625rem;
+            color: $color-white;
+            font-size: $rem-1-5;
             font-weight: normal;
-            line-height: 2em;
-            border-radius: 1.6875rem;
+            line-height: $rem-2;
+            border-radius: $rem-16875;
             transition: all 0.5s ease;
-            margin-right: 0.25rem;
-            margin-bottom: 0.25rem;
+            margin-right: $rem-025;
+            margin-bottom: $rem-025;
 
             &:focus {
                 -webkit-transform: rotate(360deg);
@@ -169,19 +89,19 @@ footer {
 
 //carrito
 #carrito {
-    margin-top: 20px;
+    margin-top: $px-20;
 
     .book {
-        border: 3px solid #333333;
-        color: #0f0f0f;
-        background-color: hsla(164, 17%, 49%, 0.562);
-        padding: 10px;
-        margin-bottom: 10px;
+        border: $px-3 solid $color-dark;
+        color: $color-black;
+        background-color: $color-verdeOscuro;
+        padding: $px-10;
+        margin-bottom: $px-10;
     }
 
     h2 {
-        margin-top: 30px;
-        font-size: 1rem;
+        margin-top: $px-30;
+        font-size: $rem-1;
         text-align: center;
     }
 
@@ -192,31 +112,29 @@ footer {
 }
 
 .TituloCarrito {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-family: $font-timesNew;
+    font-size: $rem-2;
     text-align: center;
 }
 
 #total-precio {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-family: $font-timesNew;
+    font-size: $rem-1;
     text-align: center;
 }
 
 //btn eliminar
 .eliminar {
-    background-color: #0f0f0f;
-    color: #ffffff;
-    padding: 6px 12px;
+    background-color: $color-texto;
+    color: $color-white;
+    padding: $px-6 $px-12;
     border: none;
-    border-radius: 4px;
-    font-size: 12px;
+    border-radius: $px-4;
+    font-size: $px-12;
     cursor: pointer;
 
     &:hover {
-        box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+        @include btn-sombra;
     }
 }
 
@@ -225,40 +143,36 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;
+    height: $vh-8;
 
     #boton-confirmar {
-        background-color: #0f0f0f;
-        color: #ffffff;
-        padding: 6px 12px;
+        background-color: $color-black;
+        color: $color-white;
+        padding: $px-6 $px-12;
         border: none;
-        border-radius: 4px;
-        font-size: 15px;
+        border-radius: $px-4;
+        font-size: $px-15;
         cursor: pointer;
 
         &:hover {
-            color: #68ac9a;
-            box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+            color: $color-verde;
+            @include btn-sombra;
         }
     }
 
     #volverComprar {
-        background-color: #0f0f0f;
-        color: #ffffff;
-        padding: 6px 12px;
+        background-color: $color-texto;
+        color: $color-white;
+        padding: $px-6 $px-12;
         border: none;
-        border-radius: 4px;
-        font-size: 15px;
+        border-radius: $px-4;
+        font-size: $px-15;
         cursor: pointer;
         display: none;
 
         &:hover {
-            color: #68ac9a;
-            box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
-            -webkit-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
-            -moz-box-shadow: 1px 2px 72px 19px rgba(0, 0, 0, 0.75);
+            color: $color-verde;
+            @include btn-sombra;
         }
     }
 
@@ -266,30 +180,30 @@ footer {
 
 
 #total-gastado {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1rem;
+    font-family: $font-timesNew;
+    font-size: $rem-1;
     text-align: center;
 }
 
 //input buscador
-.contenedordeBtn {
+.contenedordeBuscador {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8vh;
+    height: $vh-8;
 
     #buscador {
         outline: none;
-        width: 250px;
-        height: 30px;
+        width: $px-250;
+        height: $px-30;
         background-color: transparent;
         border: none;
-        border-bottom: 3px solid #68ac9a;
-        color: #0f0f0f;
+        border-bottom: $px-3 solid $color-verde;
+        color: $color-texto;
         transition: border-bottom .5s;
 
         &:hover {
-            border-bottom: 3px solid crimson;
+            border-bottom: $px-3 solid $color-red;
         }
     }
 }

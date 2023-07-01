@@ -1,0 +1,10 @@
+@mixin whidthyheight {
+    width: $px-40;
+    height: $px-40;
+}
+
+@mixin btn-sombra {
+    box-shadow: $px-1 $px-2 $px-72 $px-19 rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: $px-1 $px-2 $px-72 $px-19 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: $px-1 $px-2 $px-72 $px-19 rgba(0, 0, 0, 0.75);
+}

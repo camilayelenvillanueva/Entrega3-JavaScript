@@ -12,29 +12,17 @@ function toggleNavList() {
 
 //productos
 const productos = [
-
     { id: 1, titulo: "El libro de la selva", categoria: "INFANTILES", precio: 4000, rutaImagen: "01.jpg", autor: "Rudyard Kipling", sinopsis: "Yo nací en la Selva. He obedecido la Leyde la Selva, y no hay ni uno de nuestroslobos al que no haya quitado una espinade las patas. ¿Cómo no van a ser mishermanos?..." },
-
     { id: 2, titulo: "Una historia de peluche", categoria: "INFANTILES", precio: 3290, rutaImagen: "01.jpg", autor: "Sara Bertrand", sinopsis: "Una historia llena de ternura 'ilustrada por el premiado Rafael Yockteng' en la que descubriremos que cada uno tiene sus formas y que es importante no olvidarlo." },
-
     { id: 3, titulo: "Cincuentena", categoria: "POESÍA", precio: 3200, rutaImagen: "01.jpg", autor: "Tomas wsher", sinopsis: "Con el festivo pretexto de celebrar sus cincuenta años, García Montero ha seleccionado, entre su producción poética, los cincuenta poemas que integran este volumen." },
-
     { id: 4, titulo: "Hambriento", categoria: "POESÍA", precio: 4400, rutaImagen: "01.jpg", autor: "Nach", sinopsis: "El primer libro de poesía del artista de hip-hopNach." },
-
     { id: 5, titulo: "Mujeres", categoria: "NOVELA", precio: 7000, rutaImagen: "01.jpg", autor: "John Updike", sinopsis: "Una novela que funciona como resumen de la literatura de Updike y de sus temas: la sensualidad, el repaso de la vida a través de los cuerpos amados y deseados y el sexo como trascendencia." },
-
     { id: 6, titulo: "Las reglas del destino", categoria: "NOVELA", precio: 6600, rutaImagen: "01.jpg", autor: "Jazmín Riera", sinopsis: "Esta vez, el destino dicta las reglas." },
-
     { id: 7, titulo: "Cuatro comidas", categoria: "COCINA", precio: 13000, rutaImagen: "01.jpg", autor: "	Nicolás Artusi", sinopsis: " Empachado de anécdotas y repleto de eurekas, escribo esto bajo una montaña de papeles, libros y enciclopedias que se funden con mis recuerdos lejanos de la infancia, el desayuno de la vida, o con los más cercanos de este almuerzo todavía ...." },
-
     { id: 8, titulo: "Recetas de carne", categoria: "COCINA", precio: 10400, rutaImagen: "01.jpg", autor: "Pietro Sorba", sinopsis: "¿Por qué no probar más cortes? ¿Por qué no probar nuestras carnes en recetas consolidadas expresadas por otros países del mundo? ¿Por qué no abrir el juego a recetas más creativas? ¿Por qué no inspirarnos en quienes..." },
-
     { id: 9, titulo: "El libro de la selva", categoria: "INFANTILES", precio: 4000, rutaImagen: "01.jpg", autor: "Rudyard Kipling", sinopsis: "Yo nací en la Selva. He obedecido la Leyde la Selva, y no hay ni uno de nuestroslobos al que no haya quitado una espinade las patas. ¿Cómo no van a ser mishermanos?..." },
-
     { id: 10, titulo: "Una historia de peluche", categoria: "INFANTILES", precio: 3290, rutaImagen: "01.jpg", autor: "Sara Bertrand", sinopsis: "Una historia llena de ternura 'ilustrada por el premiado Rafael Yockteng' en la que descubriremos que cada uno tiene sus formas y que es importante no olvidarlo." },
-
     { id: 11, titulo: "Cincuentena", categoria: "POESÍA", precio: 3200, rutaImagen: "01.jpg", autor: "Tomas wsher", sinopsis: "Con el festivo pretexto de celebrar sus cincuenta años, García Montero ha seleccionado, entre su producción poética, los cincuenta poemas que integran este volumen." },
-
     { id: 12, titulo: "Hambriento", categoria: "POESÍA", precio: 4400, rutaImagen: "01.jpg", autor: "Nach", sinopsis: "El primer libro de poesía del artista de hip-hopNach." }
 ]
 
@@ -44,14 +32,6 @@ const buscador = document.getElementById("buscador")
 let carritoJSON = JSON.parse(localStorage.getItem("carrito"))
 let carrito = carritoJSON ? carritoJSON : []
 
-/* 
-if (carritoJSON) {
-    carrito = carritoJSON
-}else{
-    let carrito = []
-}
- */
-
 crearTarjetas(productos, contenedor)
 actualizarInterfazCarrito()
 
@@ -60,13 +40,13 @@ buscador.addEventListener("input", filtrar)
 
 //crear tarjeta
 function crearTarjetas(array, contenedor) {
-    contenedor.innerHTML = ""
+    contenedor.innerHTML= " "
     array.forEach(elemento => {
         const mensaje = "Sinopsis: " + elemento.sinopsis
         const producto = document.createElement("div")
         producto.className = "tarjetaProducto"
 
-        producto.innerHTML = `
+        producto.innerHTML= `
         <div class="filas">
           <div class="tarjeta">
                 <div class="imagen" style="background-image: url(./img/${elemento.rutaImagen})"></div>
@@ -112,19 +92,9 @@ function agregarAlCarrito(event) {
 
     !libro ? (alert("El libro seleccionado no existe.")) : null
 
-    /* if (!libro) {
-        alert("El libro seleccionado no existe.")
-        return
-    } */
-
     const libroEnCarrito = carrito.find(item => item.id === libro.id)
 
     libroEnCarrito ? (alert("El libro ya está en el carrito. Agregamos otro unidad")) : null
-
-    /*  if (libroEnCarrito) {
-         alert("El libro ya está en el carrito.")
-         return
-     } */
 
     carrito.push(libro)
     actualizarInterfazCarrito()
@@ -200,15 +170,6 @@ function eliminarDelCarrito(event) {
     const productoIndex = carrito.findIndex((producto) => producto.id === parseInt(productoId))
 
     productoIndex > -1 && (carrito.splice(productoIndex, 1), actualizarInterfazCarrito(), localStorage.setItem("carrito", JSON.stringify(carrito)))
-
-    /*   if (productoIndex > -1) {
-          carrito.splice(productoIndex, 1)
-          actualizarInterfazCarrito()
-  
-          // actualiza el carrito en el almacenamiento local
-          localStorage.setItem("carrito", JSON.stringify(carrito))
-  
-      } */
 }
 
 /* --------------------------------------- */
@@ -250,8 +211,6 @@ function volverAComprar() {
     // Redirige al usuario a la página de inicio
     window.location.href = ""
 }
-
-
 
 //recupero el valor
 //let totalGastado = localStorage.getItem("totalGastado")
