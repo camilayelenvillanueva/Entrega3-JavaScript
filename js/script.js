@@ -1,5 +1,4 @@
 
-//nav
 const primaryNavList = document.querySelector('#primary-nav-list')
 const hamburger = document.querySelector('#hamburger')
 
@@ -10,7 +9,7 @@ function toggleNavList() {
     hamburger.classList.toggle('hamburger-open')
 }
 
-//productos
+
 const productos = [
     { id: 1, titulo: "El libro de la selva", categoria: "INFANTILES", precio: 4000, rutaImagen: "01.jpg", autor: "Rudyard Kipling", sinopsis: "Yo nací en la Selva. He obedecido la Leyde la Selva, y no hay ni uno de nuestroslobos al que no haya quitado una espinade las patas. ¿Cómo no van a ser mishermanos?..." },
     { id: 2, titulo: "Una historia de peluche", categoria: "INFANTILES", precio: 3290, rutaImagen: "01.jpg", autor: "Sara Bertrand", sinopsis: "Una historia llena de ternura 'ilustrada por el premiado Rafael Yockteng' en la que descubriremos que cada uno tiene sus formas y que es importante no olvidarlo." },
@@ -35,10 +34,8 @@ let carrito = carritoJSON ? carritoJSON : []
 crearTarjetas(productos, contenedor)
 actualizarInterfazCarrito()
 
-//parar que en el buscardor se filtre por nombre del libro
 buscador.addEventListener("input", filtrar)
 
-//crear tarjeta
 function crearTarjetas(array, contenedor) {
     contenedor.innerHTML= " "
     array.forEach(elemento => {
@@ -69,13 +66,11 @@ function crearTarjetas(array, contenedor) {
         contenedor.appendChild(producto)
     })
 
-    // Agregar eventos a los botones de comprar
     const botonesComprar = document.querySelectorAll(".boton-comprar")
     botonesComprar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito)
     })
 }
-//filtrar
 function filtrar() {
     const textoBusqueda = buscador.value.toLowerCase()
     const arrayFiltrado = productos.filter(
@@ -84,8 +79,6 @@ function filtrar() {
     crearTarjetas(arrayFiltrado, contenedor)
 }
 
-//CARRITO
-//agregar al carrito
 function agregarAlCarrito(event) {
     const libroId = event.target.dataset.id
     const libro = obtenerLibroPorId(libroId)
@@ -99,11 +92,9 @@ function agregarAlCarrito(event) {
     carrito.push(libro)
     actualizarInterfazCarrito()
 
-    //para guardar los productos y los muestre
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
-//filtrar por ID
 function obtenerLibroPorId(productoId) {
     const libroEncontrado = productos.find(producto => producto.id === parseInt(productoId))
 
@@ -119,7 +110,6 @@ function obtenerLibroPorId(productoId) {
     }
 }
 
-//actualizar carrito 
 function actualizarInterfazCarrito() {
     const carritoElemento = document.getElementById("carrito")
     const totalPrecioElemento = document.getElementById("total-precio")
@@ -164,7 +154,7 @@ function actualizarInterfazCarrito() {
     totalPrecioElemento.textContent = "Total: $" + totalPrecioFormateado
 
 }
-//eliminar del carrito
+
 function eliminarDelCarrito(event) {
     const productoId = event.target.dataset.id
     const productoIndex = carrito.findIndex((producto) => producto.id === parseInt(productoId))
@@ -172,22 +162,19 @@ function eliminarDelCarrito(event) {
     productoIndex > -1 && (carrito.splice(productoIndex, 1), actualizarInterfazCarrito(), localStorage.setItem("carrito", JSON.stringify(carrito)))
 }
 
-/* --------------------------------------- */
-
-//botonees
 const botonConfirmar = document.getElementById("boton-confirmar")
 const botonVolverComprar = document.getElementById("volverComprar")
 
 botonConfirmar.addEventListener("click", confirmarCompra)
 botonVolverComprar.addEventListener("click", volverAComprar)
 
-//confirmar la compra
+
 function confirmarCompra() {
     let totalGastado = 0
     carrito.forEach(producto => {
         totalGastado += producto.precio
     })
-    //para guardar el totalGastado
+   
     localStorage.setItem("totalGastado", totalGastado)
 
     const totalGastadoElemento = document.getElementById("total-gastado")
@@ -195,26 +182,16 @@ function confirmarCompra() {
 
     carrito.length = 0
     actualizarInterfazCarrito()
-    //Oculta el botón "Confirmar compra" 
     botonConfirmar.style.display = "none"
-    //Muestra el botón "Volver a comprar"
     botonVolverComprar.style.display = "block"
 }
 
 function volverAComprar() {
-    //elimina el carrito del almacenamiento local
     localStorage.removeItem("carrito")
-    //vacía el array de productos 
     carrito = []
-    //actualiza la interfaz del carrito para reflejar los cambios
     actualizarInterfazCarrito()
-    // Redirige al usuario a la página de inicio
     window.location.href = ""
 }
 
-//recupero el valor
-//let totalGastado = localStorage.getItem("totalGastado")
-
-//borrar el valor cuando se actualice la pagina al tocar el boton "volver a comprar"
 localStorage.removeItem("totalGastado")
 
