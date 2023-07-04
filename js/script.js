@@ -9,7 +9,6 @@ function toggleNavList() {
     hamburger.classList.toggle('hamburger-open')
 }
 
-
 const productos = [
     { id: 1, titulo: "El libro de la selva", categoria: "INFANTILES", precio: 4000, rutaImagen: "01.jpg", autor: "Rudyard Kipling", sinopsis: "Yo nací en la Selva. He obedecido la Leyde la Selva, y no hay ni uno de nuestroslobos al que no haya quitado una espinade las patas. ¿Cómo no van a ser mishermanos?..." },
     { id: 2, titulo: "Una historia de peluche", categoria: "INFANTILES", precio: 3290, rutaImagen: "01.jpg", autor: "Sara Bertrand", sinopsis: "Una historia llena de ternura 'ilustrada por el premiado Rafael Yockteng' en la que descubriremos que cada uno tiene sus formas y que es importante no olvidarlo." },
