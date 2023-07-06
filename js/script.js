@@ -82,11 +82,11 @@ function agregarAlCarrito(event) {
     const libroId = event.target.dataset.id
     const libro = obtenerLibroPorId(libroId)
 
-    !libro ? (alert("El libro seleccionado no existe.")) : null
+    !libro ? (mensajeNoExiste()) : null 
 
     const libroEnCarrito = carrito.find(item => item.id === libro.id)
 
-    libroEnCarrito ? (alert("El libro ya está en el carrito. Agregamos otro unidad")) : null
+   libroEnCarrito ? (mensaje()) : null 
 
     carrito.push(libro)
     actualizarInterfazCarrito()
@@ -194,3 +194,59 @@ function volverAComprar() {
 
 localStorage.removeItem("totalGastado")
 
+function vaAlCarrito() {
+    
+Toastify({
+    text: "IR AL CARRITO",
+    destination: "#seccionCarrito",
+    duration:StaticRange,
+    newWindow: false,
+    close: true,
+    gravity: "top",
+    position: "left", 
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+    onClick: function volveraArriba(){} 
+  }).showToast();
+  volveraArriba()
+} 
+
+function volveraArriba() {
+        Toastify({
+            text: "VOLVER ARRIBA",
+            duration: StaticRange,
+            destination: "#seccionProductos",
+            newWindow: false,
+            close: true,
+            gravity: "bottom", 
+            position: "right", 
+            stopOnFocus: true, 
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function(){
+                showToast()
+            }
+          }).showToast();
+}
+
+vaAlCarrito()
+
+function mensaje() {
+    Toastify({
+        text: "El libro ya está en el carrito. Agregamos otra unidad",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        }
+      }).showToast();
+}
+function mensajeNoExiste() {
+    Toastify({
+        text: "El libro seleccionado no existe.",
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        }
+      }).showToast();
+}

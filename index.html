@@ -8,6 +8,7 @@
   <meta name="author" content="Camila Villanueva">
   <meta name="Copyright" content="Mi Libreria">
   <link rel="shortcut icon" href="https://cdn3.iconfinder.com/data/icons/set-1-1/72/books-256.png">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Mi Libreria</title>
 </head>
@@ -34,12 +35,16 @@
   <div class="contenedordeBuscador">
     <input type="text" id="buscador" placeholder="Buscar libros">
   </div>
-
+<div id="seccionProductos">
   <div id="productos"> </div>
+</div>
+  <h2 class="TituloCarrito">Carrito de Compras <img src="https://cdn0.iconfinder.com/data/icons/essentials-4/1698/shopping_bag_2-512.png" width="20px" alt="Icono de bolsa, compras, cesta
+    "></h2>
 
-  <h2 class="TituloCarrito">Carrito de Compras</h2>
-  <div id="carrito"></div>
-  <p id="total-precio"></p>
+  <div id="seccionCarrito">
+    <div id="carrito"></div>
+    <p id="total-precio"></p>
+  </div>
 
   <div class="btnConfirmar">
     <button id="boton-confirmar">Confirmar Compra</button>
@@ -71,7 +76,7 @@
           alt="icono instagram"></a>
     </div>
   </footer>
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="./js/script.js"></script>
 </body>
 
