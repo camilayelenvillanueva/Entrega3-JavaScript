@@ -36,13 +36,13 @@ actualizarInterfazCarrito()
 buscador.addEventListener("input", filtrar)
 
 function crearTarjetas(array, contenedor) {
-    contenedor.innerHTML= " "
+    contenedor.innerHTML = " "
     array.forEach(elemento => {
         const mensaje = "Sinopsis: " + elemento.sinopsis
         const producto = document.createElement("div")
         producto.className = "tarjetaProducto"
 
-        producto.innerHTML= `
+        producto.innerHTML = `
         <div class="filas">
           <div class="tarjeta">
                 <div class="imagen" style="background-image: url(./img/${elemento.rutaImagen})"></div>
@@ -57,6 +57,7 @@ function crearTarjetas(array, contenedor) {
               <div>
                 <span class="precioFinal">$ ${elemento.precio}</span>
               </div>
+              <div>
               <button class="boton-comprar" data-id="${elemento.id}">Comprar</button>
             </div>
           </div>
@@ -79,16 +80,22 @@ function filtrar() {
 }
 
 function agregarAlCarrito(event) {
+    mensajeAgregamosAlCarrito()
     const libroId = event.target.dataset.id
     const libro = obtenerLibroPorId(libroId)
 
-    !libro ? (mensajeNoExiste()) : null 
-
     const libroEnCarrito = carrito.find(item => item.id === libro.id)
-
-   libroEnCarrito ? (mensaje()) : null 
-
-    carrito.push(libro)
+     
+     if (libroEnCarrito) {
+        libroEnCarrito.cantidad++
+        libroEnCarrito.precioTotal += libro.precio
+      } else {
+        libro.cantidad = 1
+        libro.precioTotal = libro.precio
+        carrito.push(libro)
+      }
+      
+      
     actualizarInterfazCarrito()
 
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -130,11 +137,15 @@ function actualizarInterfazCarrito() {
         const precioFormateado = producto.precio.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
         precioElemento.textContent = "Precio: $" + precioFormateado
 
-        totalPrecio += producto.precio
+        const cantidadElemento = document.createElement("p")
+        cantidadElemento.textContent = "unidades: "+producto.cantidad
+
+        totalPrecio += producto.precio* producto.cantidad
 
         libroElemento.appendChild(tituloElemento)
         libroElemento.appendChild(autorElemento)
         libroElemento.appendChild(precioElemento)
+        libroElemento.appendChild(cantidadElemento)
 
         carritoElemento.appendChild(libroElemento)
 
@@ -173,7 +184,7 @@ function confirmarCompra() {
     carrito.forEach(producto => {
         totalGastado += producto.precio
     })
-   
+
     localStorage.setItem("totalGastado", totalGastado)
 
     const totalGastadoElemento = document.getElementById("total-gastado")
@@ -195,41 +206,41 @@ function volverAComprar() {
 localStorage.removeItem("totalGastado")
 
 function vaAlCarrito() {
-    
-Toastify({
-    text: "IR AL CARRITO",
-    destination: "#seccionCarrito",
-    duration:StaticRange,
-    newWindow: false,
-    close: true,
-    gravity: "top",
-    position: "left", 
-    stopOnFocus: true,
-    style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
-    },
-    onClick: function volveraArriba(){} 
-  }).showToast();
-  volveraArriba()
-} 
+
+    Toastify({
+        text: "IR AL CARRITO",
+        destination: "#seccionCarrito",
+        duration: StaticRange,
+        newWindow: false,
+        close: true,
+        gravity: "top",
+        position: "left",
+        stopOnFocus: true,
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function volveraArriba() { }
+    }).showToast();
+    volveraArriba()
+}
 
 function volveraArriba() {
-        Toastify({
-            text: "VOLVER ARRIBA",
-            duration: StaticRange,
-            destination: "#seccionProductos",
-            newWindow: false,
-            close: true,
-            gravity: "bottom", 
-            position: "right", 
-            stopOnFocus: true, 
-            style: {
-              background: "linear-gradient(to right, #00b09b, #96c93d)",
-            },
-            onClick: function(){
-                showToast()
-            }
-          }).showToast();
+    Toastify({
+        text: "VOLVER ARRIBA",
+        duration: StaticRange,
+        destination: "#seccionProductos",
+        newWindow: false,
+        close: true,
+        gravity: "bottom",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function () {
+            showToast()
+        }
+    }).showToast();
 }
 
 vaAlCarrito()
@@ -238,15 +249,15 @@ function mensaje() {
     Toastify({
         text: "El libro ya está en el carrito. Agregamos otra unidad",
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
         }
-      }).showToast();
+    }).showToast();
 }
-function mensajeNoExiste() {
+function mensajeAgregamosAlCarrito() {
     Toastify({
-        text: "El libro seleccionado no existe.",
+        text: "SU LIBRO FUE AGREGADO AL CARRITO",
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
         }
-      }).showToast();
+    }).showToast();
 }
