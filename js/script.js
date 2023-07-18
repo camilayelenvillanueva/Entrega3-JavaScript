@@ -18,14 +18,14 @@ let carritoJSON = JSON.parse(localStorage.getItem("carrito"))
 let carrito = carritoJSON ? carritoJSON : []
 
 fetch('./js/productos.json')
-  .then(response => response.json())
-  .then(data => {
-    productos = data
-    crearTarjetas(productos, contenedor)
-  })
-  .catch(error => {
-    console.error('Error al cargar los datos de productos:', error)
-  })
+    .then(response => response.json())
+    .then(data => {
+        productos = data
+        crearTarjetas(productos, contenedor)
+    })
+    .catch(error => {
+        console.error('Error al cargar los datos de productos:', error)
+    })
 
 buscador.addEventListener("input", filtrar)
 
@@ -79,17 +79,17 @@ function agregarAlCarrito(event) {
     const libro = obtenerLibroPorId(libroId)
 
     const libroEnCarrito = carrito.find(item => item.id === libro.id)
-     
-     if (libroEnCarrito) {
+
+    if (libroEnCarrito) {
         libroEnCarrito.cantidad++
         libroEnCarrito.precioTotal += libro.precio
-      } else {
+    } else {
         libro.cantidad = 1
         libro.precioTotal = libro.precio
         carrito.push(libro)
-      }
-      
-      
+    }
+
+
     actualizarInterfazCarrito()
 
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -132,9 +132,9 @@ function actualizarInterfazCarrito() {
         precioElemento.textContent = "Precio: $" + precioFormateado
 
         const cantidadElemento = document.createElement("p")
-        cantidadElemento.textContent = "unidades: "+producto.cantidad
+        cantidadElemento.textContent = "unidades: " + producto.cantidad
 
-        totalPrecio += producto.precio* producto.cantidad
+        totalPrecio += producto.precio * producto.cantidad
 
         libroElemento.appendChild(tituloElemento)
         libroElemento.appendChild(autorElemento)
