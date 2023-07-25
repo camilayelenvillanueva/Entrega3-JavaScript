@@ -78,7 +78,7 @@ footer {
             margin-right: $rem-025;
             margin-bottom: $rem-025;
 
-            &:focus {
+            &:hover {
                 -webkit-transform: rotate(360deg);
                 -ms-transform: rotate(360deg);
                 transform: rotate(360deg);
